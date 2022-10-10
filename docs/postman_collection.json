@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "43b446ce-8c8a-438c-b415-03cd7c56c512",
+		"name": "Coinbit Kafka Stream",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Deposit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"wallet_id\": \"1234567890\",\n    \"amount\": 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9091/wallet/deposit",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"wallet",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/wallet/details/1234567890",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"wallet",
+						"details",
+						"1234567890"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
